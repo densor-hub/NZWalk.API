@@ -32,7 +32,7 @@ namespace NZWalks.API.Repositories
             return region;
         }
 
-        public async Task<Region?> UpdateRegionAsync(Guid id, CreateRegionDTO
+        public async Task<Region?> UpdateRegionAsync(Guid id, RegionResponseDTO
             region)
         {
             var isExistingRegion = await _dbContext.Regions.FirstOrDefaultAsync(x => x.Id == id);
@@ -48,8 +48,7 @@ namespace NZWalks.API.Repositories
             return isExistingRegion;
         }
 
-        public async Task<Region?
-            > DeleteRegionAsync(Guid id)
+        public async Task<Region?> DeleteRegionAsync(Guid id)
         {
             var isExistingRegion = _dbContext.Regions.FirstOrDefault(x => x.Id == id);
 

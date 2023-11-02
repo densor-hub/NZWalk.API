@@ -12,10 +12,8 @@ namespace NZWalks.API.Repositories
         Task<Region > CreateRegionAsync(Region region);
 
        
-       Task<Region?> UpdateRegionAsync(Guid id, CreateRegionDTO
-region);
+       Task<Region?> UpdateRegionAsync(Guid id, RegionResponseDTO region);
 
-       Task<Region?
-           > DeleteRegionAsync(Guid id);
+       Task<Region?> DeleteRegionAsync(Guid id);
     }
 }
